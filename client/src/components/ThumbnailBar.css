@@ -5,9 +5,9 @@
   position: fixed;
   max-width: 500px;
   top: 0;
+  margin-left: calc((100vw - 500px) / 2);
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
   flex-direction: row;
-  max-width: 500px;
 }
