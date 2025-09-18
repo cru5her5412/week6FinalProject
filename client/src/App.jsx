@@ -14,10 +14,18 @@ export default function App() {
     }
     getImagesFromAPI();
   }, []);
+  function handleImageClick(newIndex) {
+    setIndex(newIndex);
+    console.log(newIndex);
+  }
   return (
     <>
       <BackgroundImage index={index} imageData={imageData} />
-      <ThumbnailBar index={index} imageData={imageData} />
+      <ThumbnailBar
+        index={index}
+        imageData={imageData}
+        handleImageClick={handleImageClick}
+      />
       {/* <DirectionButtons direction="right" index={index} imageData={imageData} />
       <DirectionButtons direction="left" index={index} imageData={imageData} /> */}
     </>

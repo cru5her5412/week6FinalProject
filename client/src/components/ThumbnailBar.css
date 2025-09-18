@@ -1,0 +1,13 @@
+.thumbnailImg {
+  height: 100px;
+}
+#thumbnailBar {
+  position: fixed;
+  max-width: 500px;
+  top: 0;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  flex-direction: row;
+  max-width: 500px;
+}

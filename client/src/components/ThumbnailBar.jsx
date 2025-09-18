@@ -1,12 +1,17 @@
 import "./ThumbnailBar.css";
 import Thumbnail from "./Thumbnail.jsx";
-export default function ThumbnailBar({ imageData, index }) {
-  console.log(imageData);
+export default function ThumbnailBar({ imageData, index, handleImageClick }) {
   return (
-    <>
-      {imageData.map((image, i) => {
-        <Thumbnail currIndex={i} image={image} index={index} />;
-      })}
-    </>
+    <div id="thumbnailBar">
+      {imageData.map((image, i) => (
+        <Thumbnail
+          key={`ImageNo${i}`}
+          currActiveIndex={index}
+          image={image}
+          index={i}
+          handleImageClick={handleImageClick}
+        />
+      ))}
+    </div>
   );
 }

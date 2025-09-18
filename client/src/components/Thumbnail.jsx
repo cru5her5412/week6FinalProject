@@ -1,11 +1,25 @@
-export default function Thumbnail({ image, index, currIndex }) {
-  console.log(image);
+export default function Thumbnail({
+  image,
+  index,
+  currActiveIndex,
+  handleImageClick,
+}) {
   return (
     <>
-      {index == currIndex ? (
-        <img className="currentImage" src={image?.url} alt={image?.alt} />
+      {index == currActiveIndex ? (
+        <img
+          className="currentImage thumbnailImg"
+          src={image?.url}
+          alt={image?.alt}
+          onClick={() => handleImageClick(index)}
+        />
       ) : (
-        <img src={image?.url} alt={image?.alt} />
+        <img
+          className="thumbnailImg"
+          src={image?.url}
+          alt={image?.alt}
+          onClick={() => handleImageClick(index)}
+        />
       )}
     </>
   );
