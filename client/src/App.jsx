@@ -6,18 +6,16 @@ import "./App.css";
 export default function App() {
   const [imageData, setImageData] = useState([]);
   const [index, setIndex] = useState(0);
-  const [searchQuery, setSearchQuery] = useState("dogs");
+  // const [searchQuery, setSearchQuery] = useState("dogs");
   useEffect(() => {
     async function getImagesFromAPI() {
-      let response = await fetch(
-        import.meta.env.VITE_API_URL + `&query=${searchQuery}` + `page=1`
-      );
+      let response = await fetch(import.meta.env.VITE_API_URL);
       let parsedData = await response.json();
       setImageData(parsedData);
+      console.log(parsedData);
     }
     getImagesFromAPI();
-    console.log("running");
-  }, [searchQuery]);
+  }, []);
   function handleImageClick(newIndex) {
     setIndex(newIndex);
     console.log(newIndex);
@@ -32,7 +30,7 @@ export default function App() {
       />
       {/* <DirectionButtons direction="right" index={index} imageData={imageData} />
       <DirectionButtons direction="left" index={index} imageData={imageData} /> */}
-      <input
+      {/* <input
         className="searchBar"
         value={searchQuery}
         onChange={(e) => {
@@ -40,7 +38,9 @@ export default function App() {
           setImageData([]);
         }}
         type="text"
-      />
+      /> 
+      Set up search bar before deciding to try and make my own api
+      */}
     </>
   );
 }
