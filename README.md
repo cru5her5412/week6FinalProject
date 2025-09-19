@@ -10,7 +10,7 @@
   I do not enjoy making UIs for apps, I prefer the backend
 
 - Requesting feedback about a specific part of your submission.
-  Is the method I used to create the api acceptable, I do not currently know a better way to do it, or how I can make it more secure
+  Is the way i handled being able to select a specific image accessible, would a screenreader still read the alt of an image if it was inside a button, and would it read it when the image was selected?
 - What useful external sources helped you complete the assignment (e.g Youtube tutorials)?
   Looked at the Express api documentation, some forums on render server issues, and a geeksforgeeks page on how to host files on an express server
 - What errors or bugs did you encounter while completing your assignment? How did you solve them?
