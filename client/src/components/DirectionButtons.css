@@ -12,3 +12,11 @@
 .rightButton {
   right: 10px;
 }
+@media (max-width: 600px) {
+  .directionButton {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+  }
+}
