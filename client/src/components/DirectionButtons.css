@@ -1,0 +1,14 @@
+.directionButton {
+  position: fixed;
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  background-color: white;
+  border-radius: 15px;
+}
+.leftButton {
+  left: 10px;
+}
+.rightButton {
+  right: 10px;
+}

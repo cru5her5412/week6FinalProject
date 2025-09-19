@@ -28,8 +28,18 @@ export default function App() {
         imageData={imageData}
         handleImageClick={handleImageClick}
       />
-      {/* <DirectionButtons direction="right" index={index} imageData={imageData} />
-      <DirectionButtons direction="left" index={index} imageData={imageData} /> */}
+      <DirectionButtons
+        direction="right"
+        index={index}
+        setIndex={setIndex}
+        imageData={imageData}
+      />
+      <DirectionButtons
+        direction="left"
+        index={index}
+        setIndex={setIndex}
+        imageData={imageData}
+      />
       {/* <input
         className="searchBar"
         value={searchQuery}
