@@ -12,13 +12,11 @@ export default function App() {
       let response = await fetch(import.meta.env.VITE_API_URL);
       let parsedData = await response.json();
       setImageData(parsedData);
-      console.log(parsedData);
     }
     getImagesFromAPI();
   }, []);
   function handleImageClick(newIndex) {
     setIndex(newIndex);
-    console.log(newIndex);
   }
   return (
     <>
