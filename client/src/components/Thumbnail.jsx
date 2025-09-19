@@ -7,19 +7,17 @@ export default function Thumbnail({
   return (
     <>
       {index == currActiveIndex ? (
-        <img
-          className="currentImage thumbnailImg"
-          src={image?.url}
-          alt={image?.alt}
-          onClick={() => handleImageClick(index)}
-        />
+        <button className="imageButton" onClick={() => handleImageClick(index)}>
+          <img
+            className="currentImage thumbnailImg"
+            src={image?.url}
+            alt={image?.alt}
+          />
+        </button>
       ) : (
-        <img
-          className="thumbnailImg"
-          src={image?.url}
-          alt={image?.alt}
-          onClick={() => handleImageClick(index)}
-        />
+        <button className="imageButton" onClick={() => handleImageClick(index)}>
+          <img className="thumbnailImg" src={image?.url} alt={image?.alt} />
+        </button>
       )}
     </>
   );

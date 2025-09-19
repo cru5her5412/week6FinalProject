@@ -26,6 +26,7 @@ export default function DirectionButtons({
   return (
     <>
       <button
+        aria-label={`button to move ${direction} 1 image (looping)`}
         className={`${direction}Button directionButton`}
         onClick={() => handleDirectionButtonClick(direction)}
       >

@@ -1,9 +1,12 @@
 .thumbnailImg {
   height: 100px;
+  min-width: 100px;
+  /* width: auto; */
   margin-left: 2px;
   margin-right: 2px;
   border: 1px, solid, red;
 }
+
 #thumbnailBar {
   position: fixed;
   max-width: 500px;
