@@ -9,15 +9,15 @@ export default function Thumbnail({
       {index == currActiveIndex ? (
         <img
           className="currentImage thumbnailImg"
-          src={image?.urls?.raw}
-          alt={image?.slug}
+          src={image?.url}
+          alt={image?.alt}
           onClick={() => handleImageClick(index)}
         />
       ) : (
         <img
           className="thumbnailImg"
-          src={image?.urls?.raw}
-          alt={image?.slug}
+          src={image?.url}
+          alt={image?.alt}
           onClick={() => handleImageClick(index)}
         />
       )}
